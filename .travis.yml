@@ -8,3 +8,4 @@ deploy:
   file: travis-test
   on:
     repo: admirallarimda/travis-test
+    tags: true
