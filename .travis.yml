@@ -1,0 +1,9 @@
+language: go
+go:
+  - "1.11"
+deploy:
+  provider: releases
+  file: "travis-test"
+  skip_cleanup: true
+  on:
+    tags: true
