@@ -8,7 +8,7 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - go get github.com/mitchellh/gox
-  - gox -os="linux darwin windows" -arch="amd64" -output="travis-test.." -verbose ./...
+  - gox -os="linux darwin windows" -arch="amd64" -output="{{.Dir}}.{{.OS}}.{{.Arch}}" -verbose ./...
 
 deploy:
   provider: releases
